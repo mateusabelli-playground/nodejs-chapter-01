@@ -1,12 +1,12 @@
-# _Todos_ API ✔
-
-Essa é uma aplicação **Node.js** de uma API que permite ao usuário que se cadastre e gerencie seus _todos_. As ações são feitas por meio de rotas de operações **CRUD** e cada usuário possuí uma lista de _todos_ própria. O aplicativo e o design foram criados pela @Rocketseat e entregues como um desafio de módulo no **Ignite Bootcamp** de Node.js
-
-## 👨‍💻 Desafios
+# 👨‍💻 Desafios Ignite 2021 - Node.js
 
 ### 01 - Conceitos do Node.js
 
-Será permitida a criação de um usuário com `name` e `username` bem como fazer o CRUD de *todos*:
+`branch challenge-01`
+
+Nesse desafio, você deverá criar uma aplicação para treinar o que aprendeu até agora no Node.js!
+
+Essa será uma aplicação para gerenciar tarefas (em inglês _todos_). Será permitida a criação de um usuário com `name` e `username`, bem como fazer o CRUD de *todos*:
 
 - Criar um novo _todo_;
 - Listar todos os _todos_;
@@ -14,47 +14,43 @@ Será permitida a criação de um usuário com `name` e `username` bem
 - Marcar um _todo_ como feito;
 - Excluir um _todo_;
 
-Tudo isso para cada usuário em específico
+Tudo isso para cada usuário em específico (o `username` será passado pelo header).
 
 ### 02 - Trabalhando com middlewares
 
-Os mesmos requisitos do desafio anterior porém dessa vez teremos um plano grátis onde o usuário só pode criar até dez todos e um plano Pro que irá permitir criar todos ilimitados, isso tudo usando middlewares para fazer as validações necessárias.
+`branch challenge-02`
 
-## 🌐 Rotas da API
+Nesse desafio você irá trabalhar mais a fundo com middlewares no Express. Dessa forma você será capaz de fixar mais ainda os conhecimentos obtidos até agora.
 
-### Usuários
+Para facilitar um pouco mais do conhecimento da regra de negócio, você irá trabalhar com a mesma aplicação do desafio anterior: uma aplicação para gerenciar tarefas (ou _todos_) mas com algumas mudanças.
 
-| Método  | Endpoint        | Descrição                   |
-| ------- | --------------- | --------------------------- |
-| `GET`   | `/users:id`     | Encontrar um usuário por ID |
-| `POST`  | `/users`        | Criar um novo usuário       |
-| `PATCH` | `/users:id/pro` | Atualizar plano do usuário  |
+Será permitida a criação de um usuário com `name` e `username`, bem como fazer o CRUD de *todos*:
 
-### _Todos_
+- Criar um novo _todo_;
+- Listar todos os _todos_;
+- Alterar o `title` e `deadline` de um _todo_ existente;
+- Marcar um _todo_ como feito;
+- Excluir um _todo_;
 
-| Método   | Endpoint         | Descrição                        |
-| -------- | ---------------- | -------------------------------- |
-| `GET`    | `/todos`         | Encontrar _todos_ do usuário     |
-| `POST`   | `/todos`         | Criar uma nova _todo_ do usuário |
-| `PUT`    | `/todos:id`      | Atualizar uma _todo_             |
-| `PATCH`  | `/todos:id/done` | Marcar uma _todo_ como concluída |
-| `DELETE` | `/todos:id`      | Excluir uma _todo_               |
+Tudo isso para cada usuário em específico. Além disso, dessa vez teremos um plano grátis onde o usuário só pode criar até dez _todos_ e um plano Pro que irá permitir criar _todos_ ilimitados, isso tudo usando middlewares para fazer as validações necessárias.
 
-## 📦 Rodando o projeto
+### 03 - Corrigindo o código
 
-```bash
-# Clone o repositório e instale as dependências
-git clone https://github.com/mateusabelli/todos-api.git
+`branch challenge-03`
 
-cd todos-api
+Nesse desafio, temos uma aplicação Node.js que está em processo de desenvolvimento mas que já possui os testes necessários para fazer toda a validação dos requisitos (você não deve mexer nos testes).
+Após algumas alterações no código da aplicação, parte dos testes deixaram de passar e agora só você pode resolver esse problema. Bora lá? 🚀
 
-pnpm install
-```
+Essa aplicação realiza o CRUD (**C**reate, **R**ead, **U**pdate, **D**elete) de repositórios de projetos. Além disso, é possível dar likes em repositórios cadastrados, aumentando a quantidade de likes em 1 a cada vez que a rota é chamada.
 
-```bash
-# Execute a aplicação (Porta :3333)
-pnpm run dev
+A estrutura de um repositório ao ser criado é a seguinte:
 
-# Execute os testes unitários
-pnpm run test
+```javascript
+{
+  id: uuid(),
+  title,
+  url,
+  techs,
+  likes: 0
+}
 ```
