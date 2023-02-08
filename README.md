@@ -1,12 +1,12 @@
 # _Todos_ API ✔
 
-Essa é uma aplicação **Node.js** de uma API que permite ao usuário que se cadastre e gerencie seus _todos_. As ações são feitas por meio de rotas de operações **CRUD** e cada usuário possuí uma lista de _todos_ própria. O aplicativo e o design foram criados pela @Rocketseat e entregues como um desafio de módulo para no **Ignite Bootcamp**
+Essa é uma aplicação **Node.js** de uma API que permite ao usuário que se cadastre e gerencie seus _todos_. As ações são feitas por meio de rotas de operações **CRUD** e cada usuário possuí uma lista de _todos_ própria. O aplicativo e o design foram criados pela @Rocketseat e entregues como um desafio de módulo no **Ignite Bootcamp** de Node.js
 
 ## 👨‍💻 Desafios
 
 ### 01 - Conceitos do Node.js
 
-Será permitida a criação de um usuário com `name` e `username`, bem como fazer o CRUD de *todos*:
+Será permitida a criação de um usuário com `name` e `username` bem como fazer o CRUD de *todos*:
 
 - Criar um novo _todo_;
 - Listar todos os _todos_;
